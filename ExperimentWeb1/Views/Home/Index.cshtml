@@ -1,0 +1,30 @@
+﻿@using ExperimentWeb1.Models
+
+@model Person
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/MasterPage.cshtml";
+}
+
+<h2>Index</h2>
+
+@section SideMenu{
+    appear side menu    
+}
+
+@using (Html.BeginForm("index", "Home", FormMethod.Post, new { @id = "frmTest" })) {
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)<br/>
+
+    @Html.LabelFor(m => m.LastName)
+    @Html.TextBoxFor(m=>m.LastName)
+}
+
+@section Footer{
+
+
+    hellloo footer
+
+
+}
